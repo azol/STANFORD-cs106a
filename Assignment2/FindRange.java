@@ -1,15 +1,40 @@
 /*
  * File: FindRange.java
- * Name:
+ * Name: Artem Zolochevskiy
  * Section Leader:
  * --------------------
- * This file is the starter file for the FindRange problem.
+ * This file is the solution file for the FindRange problem.
  */
 
 import acm.program.*;
 
 public class FindRange extends ConsoleProgram {
+
+	private static final int SENTINEL = 0;
+
 	public void run() {
-		/* You fill this in */
+		println("This program finds the largest and smallest numbers.");
+
+		int largest = 0;
+		int smallest = 0;
+		int counter = 0;
+		while (true) {
+			int n = readInt("? ");
+			if ( n == SENTINEL) {
+				if (counter == 0) println("You haven't entered any values."); /* Check if the user enters SENTINEL only */
+				if (counter == 1) smallest = largest; /* Check if the user enters only one value */
+				break;
+			}
+			if ( n > largest) {
+				smallest = largest;
+				largest = n;
+			} else {
+				smallest = (smallest < n) ? smallest : n;
+			}
+			counter++;
+		}
+
+		println("smallest: " + smallest);
+		println("largest: " + largest);
 	}
 }

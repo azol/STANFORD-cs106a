@@ -5,6 +5,7 @@
  * the baby-name database described in the assignment handout.
  */
 
+import acm.graphics.GCanvas;
 import acm.program.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -17,7 +18,25 @@ public class NameSurfer extends Program implements NameSurferConstants {
  * and initializing the interactors at the bottom of the window.
  */
 	public void init() {
-	    // You fill this in, along with any helper methods //
+		initInteractors();
+		db = new NameSurferDataBase(NAMES_DATA_FILE);
+	}
+
+	private void initInteractors() {
+		JLabel nameLabel = new JLabel("Name");
+		nameTextField = new JTextField(15);
+		nameTextField.addActionListener(this);
+		JButton graphButton = new JButton("Graph");
+		JButton clearButton = new JButton("Clear");
+		graph = new NameSurferGraph();
+
+		add(nameLabel, SOUTH);
+		add(nameTextField, SOUTH);
+		add(graphButton, SOUTH);
+		add(clearButton, SOUTH);
+		add(graph);
+
+		addActionListeners();
 	}
 
 /* Method: actionPerformed(e) */
@@ -27,6 +46,18 @@ public class NameSurfer extends Program implements NameSurferConstants {
  * button actions.
  */
 	public void actionPerformed(ActionEvent e) {
-		// You fill this in //
+		if (e.getSource() == nameTextField || e.getActionCommand().equals("Graph")) {
+			String entryKey = nameTextField.getText();
+			NameSurferEntry entry = db.findEntry(entryKey);
+			if (entry != null) graph.addEntry(entry);
+		}
+
+		if (e.getActionCommand().equals("Clear")) {
+			graph.clear();
+		}
 	}
+
+	private JTextField nameTextField;
+	private NameSurferDataBase db;
+	private NameSurferGraph graph;
 }

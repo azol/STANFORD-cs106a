@@ -26,7 +26,8 @@ public class NameSurferGraph extends GCanvas
 	* Clears the list of name surfer entries stored inside this class.
 	*/
 	public void clear() {
-		//	 You fill this in //
+		entryList.clear();
+		update();
 	}
 
 	/* Method: addEntry(entry) */
@@ -36,7 +37,8 @@ public class NameSurferGraph extends GCanvas
 	* simply stores the entry; the graph is drawn by calling update.
 	*/
 	public void addEntry(NameSurferEntry entry) {
-		// You fill this in //
+		if (!entryList.contains(entry)) entryList.add(entry);
+		update();
 	}
 
 
@@ -49,15 +51,89 @@ public class NameSurferGraph extends GCanvas
 	* the size of the canvas changes.
 	*/
 	public void update() {
-		//	 You fill this in //
+		removeAll();
+		drawVerticalLines();
+		drawHorizontalLines();
+		drawDecadeLabels();
+		drawDbEntires();
+	}
+
+	private void drawDbEntires() {
+		Iterator<NameSurferEntry> it = entryList.iterator();
+		while (it.hasNext()) {
+			drawOneDbEntry(it.next());
+		}
 	}
 
 
+	private void drawOneDbEntry(NameSurferEntry entry) {
+		Color color = setColor(entryList.indexOf(entry));
+		for (int i = 0; i < NDECADES - 1; i++ ){
+			double x0 = i * getWidth() / 11;
+			double y0 = (getHeight() - 2 * GRAPH_MARGIN_SIZE) / 1000.0 * entry.getRank(i) + GRAPH_MARGIN_SIZE;
+			if (entry.getRank(i) == 0) y0 = getHeight() - GRAPH_MARGIN_SIZE;
+			double x1 = (i + 1) * getWidth() / 11;
+			double y1 = (getHeight() - 2 * GRAPH_MARGIN_SIZE) / 1000.0 * entry.getRank(i + 1) + GRAPH_MARGIN_SIZE;
+			if (entry.getRank(i + 1) == 0) y1 = getHeight() - GRAPH_MARGIN_SIZE;
+			GLine line = new GLine(x0, y0, x1, y1);
+			line.setColor(color);
+			add(line);
 
+			String nameAndRank = entry.getName() + " " + entry.getRank(i);
+			if (entry.getRank(i) == 0) nameAndRank = entry.getName() + "*";
+			GLabel label = new GLabel(nameAndRank, x0, y0);
+			label.setColor(color);
+			add(label);
+			if (i == NDECADES - 2) {
+				nameAndRank = entry.getName() + " " + entry.getRank(i + 1);
+				if (entry.getRank(i + 1) == 0) nameAndRank = entry.getName() + "*";
+				label = new GLabel(nameAndRank, x1, y1);
+				label.setColor(color);
+				add(label);
+			}
+		}
+	}
+
+	private Color setColor(int n) {
+		switch (n % 4) {
+		case  0: return Color.BLACK;
+		case  1: return Color.RED;
+		case  2: return Color.BLUE;
+		case  3: return Color.MAGENTA;
+		default: return Color.BLACK;
+		}
+	}
+
+	private void drawDecadeLabels() {
+		for (int i = 0; i < NDECADES; i++) {
+			double x = i * getWidth() / NDECADES;
+			String decadeLabelText = "" + (i * 10 + START_DECADE);
+			GLabel decadeLabel = new GLabel(decadeLabelText, x, getHeight());
+			add(decadeLabel);
+		}
+	}
+
+	private void drawHorizontalLines() {
+		GLine topHorizontalLine = new GLine(0, GRAPH_MARGIN_SIZE, getWidth(), GRAPH_MARGIN_SIZE);
+		add(topHorizontalLine);
+		GLine bottomHorizontalLine = new GLine(0, getHeight() - GRAPH_MARGIN_SIZE, getWidth(), getHeight() - GRAPH_MARGIN_SIZE);
+		add(bottomHorizontalLine);
+	}
+
+	private void drawVerticalLines() {
+		for (int i = 1; i <= NDECADES; i++) {
+			double x0 = i * getWidth() / NDECADES;
+			double x1 = x0;
+			GLine line = new GLine(x0, 0 , x1, getWidth());
+			add(line);
+		}
+	}
 
 	/* Implementation of the ComponentListener interface */
 	public void componentHidden(ComponentEvent e) { }
 	public void componentMoved(ComponentEvent e) { }
 	public void componentResized(ComponentEvent e) { update(); }
 	public void componentShown(ComponentEvent e) { }
+
+	private ArrayList<NameSurferEntry> entryList = new ArrayList<NameSurferEntry>();
 }

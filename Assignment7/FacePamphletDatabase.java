@@ -27,9 +27,8 @@ public class FacePamphletDatabase implements FacePamphletConstants {
 	 * the new profile passed in.
 	 */
 	public void addProfile(FacePamphletProfile profile) {
-		// You fill this in
+		facePamphletDB.put(profile.getName(), profile);
 	}
-
 
 	/**
 	 * This method returns the profile associated with the given name
@@ -38,7 +37,8 @@ public class FacePamphletDatabase implements FacePamphletConstants {
 	 */
 	public FacePamphletProfile getProfile(String name) {
 		// You fill this in.  Currently always returns null.
-		return null;
+		// return null;
+		return facePamphletDB.get(name);
 	}
 
 
@@ -53,8 +53,15 @@ public class FacePamphletDatabase implements FacePamphletConstants {
 	 */
 	public void deleteProfile(String name) {
 		// You fill this in
-	}
+		facePamphletDB.remove(name);
 
+		// Update profiles
+		Iterator<String> it = facePamphletDB.keySet().iterator();
+		while (it.hasNext()) {
+			FacePamphletProfile profile = facePamphletDB.get(it.next());
+			profile.removeFriend(name);
+		}
+	}
 
 	/**
 	 * This method returns true if there is a profile in the database
@@ -62,7 +69,10 @@ public class FacePamphletDatabase implements FacePamphletConstants {
 	 */
 	public boolean containsProfile(String name) {
 		// You fill this in.  Currently always returns false.
-		return false;
+		// return false;
+		return facePamphletDB.containsKey(name);
 	}
 
+	HashMap<String,FacePamphletProfile> facePamphletDB =
+		new HashMap<String,FacePamphletProfile>();
 }

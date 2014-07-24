@@ -1,6 +1,6 @@
 /*
- * File: Breakout.java
- * -------------------
+ * File: BreakoutBreakoutExtended.java
+ * -----------------------------------
  * Name: Artem Zolochevskiy
  * Section Leader:
  *
@@ -14,7 +14,7 @@ import acm.util.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Breakout extends GraphicsProgram {
+public class BreakoutExtended extends GraphicsProgram {
 
 /** Width and height of application window in pixels */
 	public static final int APPLICATION_WIDTH = 400;
@@ -144,8 +144,10 @@ public class Breakout extends GraphicsProgram {
 			 * Don't reverse negative vy (moving up) to avoid "glued" ball effect.
 			 */
 			if (collider == paddle) {
+				bounceClip.play();
 				if (vy > 0)  vy = -vy;
 			} else if (collider != null) {
+				bounceClip.play();
 				remove(collider);
 				brickCounter--;
 
@@ -224,6 +226,7 @@ public class Breakout extends GraphicsProgram {
 	private void setupGame() {
 		setupBricks();
 		createPaddle();
+		bounceClip.setVolume(1);
 	}
 
 	/* Sets up the bricks.
@@ -330,6 +333,8 @@ public class Breakout extends GraphicsProgram {
 
 	/* Not sure if I need */
 	int brickCounter = NBRICK_ROWS * NBRICKS_PER_ROW;
+
+	SoundClip bounceClip = new SoundClip("bounce.au");
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 }
