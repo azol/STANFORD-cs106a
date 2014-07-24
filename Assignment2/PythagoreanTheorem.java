@@ -1,7 +1,7 @@
 /*
  * File: PythagoreanTheorem.java
- * Name: 
- * Section Leader: 
+ * Name:
+ * Section Leader:
  * -----------------------------
  * This file is the starter file for the PythagoreanTheorem problem.
  */

@@ -10,7 +10,7 @@
  */
 
 public class NameSurferDataBase implements NameSurferConstants {
-	
+
 /* Constructor: NameSurferDataBase(filename) */
 /**
  * Creates a new NameSurferDataBase and initializes it using the
@@ -21,7 +21,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 	public NameSurferDataBase(String filename) {
 		// You fill this in //
 	}
-	
+
 /* Method: findEntry(name) */
 /**
  * Returns the NameSurferEntry associated with this name, if one
@@ -33,4 +33,3 @@ public class NameSurferDataBase implements NameSurferConstants {
 		return null;
 	}
 }
-

@@ -1,7 +1,7 @@
 /*
  * File: Hailstone.java
- * Name: 
- * Section Leader: 
+ * Name:
+ * Section Leader:
  * --------------------
  * This file is the starter file for the Hailstone problem.
  */
@@ -13,4 +13,3 @@ public class Hailstone extends ConsoleProgram {
 		/* You fill this in */
 	}
 }
-

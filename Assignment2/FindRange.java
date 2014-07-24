@@ -1,7 +1,7 @@
 /*
  * File: FindRange.java
- * Name: 
- * Section Leader: 
+ * Name:
+ * Section Leader:
  * --------------------
  * This file is the starter file for the FindRange problem.
  */
@@ -13,4 +13,3 @@ public class FindRange extends ConsoleProgram {
 		/* You fill this in */
 	}
 }
-

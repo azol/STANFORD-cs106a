@@ -21,14 +21,14 @@ public class NameSurferGraph extends GCanvas
 		addComponentListener(this);
 		//	 You fill in the rest //
 	}
-	
+
 	/**
 	* Clears the list of name surfer entries stored inside this class.
 	*/
 	public void clear() {
 		//	 You fill this in //
 	}
-	
+
 	/* Method: addEntry(entry) */
 	/**
 	* Adds a new NameSurferEntry to the list of entries on the display.
@@ -38,9 +38,9 @@ public class NameSurferGraph extends GCanvas
 	public void addEntry(NameSurferEntry entry) {
 		// You fill this in //
 	}
-	
-	
-	
+
+
+
 	/**
 	* Updates the display image by deleting all the graphical objects
 	* from the canvas and then reassembling the display according to
@@ -51,10 +51,10 @@ public class NameSurferGraph extends GCanvas
 	public void update() {
 		//	 You fill this in //
 	}
-	
-	
-	
-	
+
+
+
+
 	/* Implementation of the ComponentListener interface */
 	public void componentHidden(ComponentEvent e) { }
 	public void componentMoved(ComponentEvent e) { }

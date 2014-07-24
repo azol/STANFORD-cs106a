@@ -54,4 +54,3 @@ public class NameSurferEntry implements NameSurferConstants {
 		return "";
 	}
 }
-

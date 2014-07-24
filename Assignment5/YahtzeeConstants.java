@@ -43,5 +43,5 @@ public interface YahtzeeConstants {
 	public static final int CHANCE = 15;
 	public static final int LOWER_SCORE = 16;
 	public static final int TOTAL = 17;
-  
+
 }
