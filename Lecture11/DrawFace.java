@@ -19,4 +19,10 @@ public class DrawFace extends GraphicsProgram {
 		add(face, (getWidth() - FACE_WIDTH) / 2,
 				(getHeight() - FACE_HEIGHT) / 2);
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new DrawFace().start(args);
+	}
 }

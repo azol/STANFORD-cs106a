@@ -32,4 +32,10 @@ public class Pyramid extends GraphicsProgram {
 			y -= BRICK_HEIGHT;
 		}
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Pyramid().start(args);
+	}
 }

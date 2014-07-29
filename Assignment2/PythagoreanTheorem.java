@@ -19,4 +19,10 @@ public class PythagoreanTheorem extends ConsoleProgram {
 	private double calculatePythagoreanTheoremC(int a, int b) {
 		return Math.sqrt((a * a + b * b));
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new PythagoreanTheorem().start(args);
+	}
 }

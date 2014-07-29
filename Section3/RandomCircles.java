@@ -39,4 +39,9 @@ public class RandomCircles extends GraphicsProgram {
 /* Private instance variable */
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new RandomCircles().start(args);
+	}
 }

@@ -61,4 +61,10 @@ public class StringExamples extends ConsoleProgram {
 		}
 		return str;
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new StringExamples().start(args);
+	}
 }

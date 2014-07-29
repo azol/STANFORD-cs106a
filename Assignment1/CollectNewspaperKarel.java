@@ -72,4 +72,9 @@ public class CollectNewspaperKarel extends SuperKarel {
 		goToDoor();
 	}
 
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new CollectNewspaperKarel().start(args);
+	}
 }

@@ -27,4 +27,10 @@ public class HeapStackDiagrams extends ConsoleProgram {
 		}
 		return result; // Diagram at this point
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new HeapStackDiagrams().start(args);
+	}
 }

@@ -187,4 +187,10 @@ public class FacePamphlet extends Program
 	private FacePamphletProfile currentProfile;
 
 	private FacePamphletCanvas canvas;
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new FacePamphlet().start(args);
+	}
 }

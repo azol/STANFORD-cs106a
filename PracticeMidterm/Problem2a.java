@@ -15,4 +15,10 @@ public class Problem2a extends ConsoleProgram {
 		println("7 < 9 - 5 && 3 % 0 == 3 is: " + (7 < 9 - 5 && 3 % 0 == 3));
 		println("\"B\" + 8 + 4 is: " + "B" + 8 + 4);
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Problem2a().start(args);
+	}
 }

@@ -120,4 +120,10 @@ public class InteractiveDrawFace extends GraphicsProgram {
 	private JRadioButton medRB;
 	private JRadioButton largeRB;
 	private JComboBox<String> pickColor;
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new InteractiveDrawFace().start(args);
+	}
 }

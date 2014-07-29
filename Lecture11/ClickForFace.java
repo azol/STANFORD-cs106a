@@ -27,4 +27,10 @@ public class ClickForFace extends GraphicsProgram {
 		GFace face = new GFace(FACE_DIAM, FACE_DIAM);
 		add(face, e.getX(), e.getY());
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new ClickForFace().start(args);
+	}
 }

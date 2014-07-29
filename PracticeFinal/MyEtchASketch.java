@@ -62,4 +62,10 @@ public class MyEtchASketch extends GraphicsProgram {
 	}
 
 	private GCompound cross = new GCompound();
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new MyEtchASketch().start(args);
+	}
 }

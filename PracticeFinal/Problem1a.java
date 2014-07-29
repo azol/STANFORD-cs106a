@@ -37,4 +37,10 @@ public class Problem1a extends ConsoleProgram {
 			+ "original int variable that was passed in as a parameter is not "
 			+ "modified.");
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Problem1a().start(args);
+	}
 }

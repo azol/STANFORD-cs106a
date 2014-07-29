@@ -24,4 +24,10 @@ public class Hailstone extends ConsoleProgram {
 		}
 		println("The process took " + counter + " to reach " + n);
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Hailstone().start(args);
+	}
 }

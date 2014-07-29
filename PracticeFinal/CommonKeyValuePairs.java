@@ -71,4 +71,10 @@ public class CommonKeyValuePairs extends ConsoleProgram {
 		}
 		return count;
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new CommonKeyValuePairs().start(args);
+	}
 }

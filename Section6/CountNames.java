@@ -50,4 +50,10 @@ public class CountNames extends ConsoleProgram {
 			println("Entry [" + key + "] has count " + count);
 		}
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new CountNames().start(args);
+	}
 }

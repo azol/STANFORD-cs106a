@@ -55,5 +55,11 @@ public class DragObjects extends GraphicsProgram {
 	private GObject gobj; /* The object being dragged */
 	private GPoint last;  /* The last mouse position  */
 	private RandomGenerator rgen = RandomGenerator.getInstance();
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new DragObjects().start(args);
+	}
 }
 

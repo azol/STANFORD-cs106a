@@ -35,4 +35,9 @@ public class SecondLargest extends ConsoleProgram {
 		println("The second largest is " + secondLargest);
 	}
 
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new SecondLargest().start(args);
+	}
 }

@@ -27,4 +27,10 @@ public class Problem2b extends ConsoleProgram {
 		num2 += num3 * 2;
 		return(num2);
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Problem2b().start(args);
+	}
 }

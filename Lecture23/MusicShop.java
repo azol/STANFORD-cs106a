@@ -78,4 +78,10 @@ public class MusicShop extends Program {
 	private MusicShopDisplay canvas;
 	private HashMap<String,Album> inventory =
 		new HashMap<String,Album>();
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new MusicShop().start(args);
+	}
 }

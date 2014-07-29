@@ -54,4 +54,10 @@ public class CheckWordLadder extends ConsoleProgram {
 	}
 	/* Private instance variables */
 	private Lexicon lexicon = new Lexicon("english.dat");
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new CheckWordLadder().start(args);
+	}
 }

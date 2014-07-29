@@ -45,4 +45,10 @@ public class InnerBorderKarel extends SuperKarel {
 		move();
 		turnRight();
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new InnerBorderKarel().start(args);
+	}
 }

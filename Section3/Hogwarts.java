@@ -29,4 +29,10 @@ public class Hogwarts extends ConsoleProgram {
 		y = x / (x % 10);
 		println("snitch: x = " + x + ", y = " + y); return y;
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Hogwarts().start(args);
+	}
 }

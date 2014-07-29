@@ -23,4 +23,10 @@ public class TrueFalse extends ConsoleProgram {
 			+ "with that of a variable named x in its caller.");
 		println("Answer: True");
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new TrueFalse().start(args);
+	}
 }

@@ -31,4 +31,10 @@ public class Mystery extends ConsoleProgram {
 	private int skeleton(int x, int y) {
 		return x / y % 2;
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Mystery().start(args);
+	}
 }

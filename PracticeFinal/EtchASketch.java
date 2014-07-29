@@ -63,4 +63,10 @@ public class EtchASketch extends GraphicsProgram {
 	/* Private instance variables */
 	private GCompound cross;
 	private double x, y;
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new EtchASketch().start(args);
+	}
 }

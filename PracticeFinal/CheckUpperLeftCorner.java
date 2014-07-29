@@ -51,4 +51,10 @@ public class CheckUpperLeftCorner extends ConsoleProgram {
 		}
 		return true;
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new CheckUpperLeftCorner().start(args);
+	}
 }

@@ -105,4 +105,10 @@ public class PrimVsObj extends ConsoleProgram {
 		return ((ch == 'Q') && (name.length() == 1));
 	}
 	*/
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new PrimVsObj().start(args);
+	}
 }

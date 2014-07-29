@@ -21,4 +21,10 @@ public class CountUppercase extends ConsoleProgram {
 		String str = readLine("Enter String: ");
 		println(countUppercase(str) + " upper case letters");
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new CountUppercase().start(args);
+	}
 }

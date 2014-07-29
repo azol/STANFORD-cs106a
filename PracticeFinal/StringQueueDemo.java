@@ -17,4 +17,10 @@ public class StringQueueDemo extends ConsoleProgram {
 		println("Result is:");
 		println(sq.size());
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new StringQueueDemo().start(args);
+	}
 }

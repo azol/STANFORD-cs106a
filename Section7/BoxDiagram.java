@@ -105,4 +105,10 @@ public class BoxDiagram extends GraphicsProgram {
 	private JButton clearButton;
 	private GObject currentObject;
 	private GPoint last;
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new BoxDiagram().start(args);
+	}
 }

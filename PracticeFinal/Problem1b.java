@@ -34,4 +34,10 @@ public class Problem1b extends ConsoleProgram {
 			print("[" + array[i]+ "]");
 		}
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Problem1b().start(args);
+	}
 }

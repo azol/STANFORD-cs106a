@@ -140,4 +140,10 @@ public class FlightPlanner extends ConsoleProgram {
 	/* Private instance variables */
 	private HashMap<String,ArrayList<String>> flights;
 	private ArrayList<String> cities;
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new FlightPlanner().start(args);
+	}
 }

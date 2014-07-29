@@ -37,4 +37,10 @@ public class FindRange extends ConsoleProgram {
 		println("smallest: " + smallest);
 		println("largest: " + largest);
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new FindRange().start(args);
+	}
 }

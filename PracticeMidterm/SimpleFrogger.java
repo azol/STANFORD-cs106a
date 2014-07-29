@@ -71,4 +71,10 @@ public class SimpleFrogger extends GraphicsProgram {
 /* Sets the graphics window size */
 	public static final int APPLICATION_WIDTH = NCOLUMNS * SQUARE_SIZE;
 	public static final int APPLICATION_HEIGHT = NROWS * SQUARE_SIZE;
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new SimpleFrogger().start(args);
+	}
 }

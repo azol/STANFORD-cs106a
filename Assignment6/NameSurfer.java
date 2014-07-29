@@ -60,4 +60,10 @@ public class NameSurfer extends Program implements NameSurferConstants {
 	private JTextField nameTextField;
 	private NameSurferDataBase db;
 	private NameSurferGraph graph;
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new NameSurfer().start(args);
+	}
 }

@@ -64,4 +64,9 @@ public class WordCount extends ConsoleProgram {
 		if (inWord) words++;
 		return words;
 	}
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new WordCount().start(args);
+	}
 }

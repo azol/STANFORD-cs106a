@@ -72,4 +72,10 @@ public class DoubleBeepers extends SuperKarel {
 		move();
 		turnAround();
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new DoubleBeepers().start(args);
+	}
 }

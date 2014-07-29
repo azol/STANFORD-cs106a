@@ -32,4 +32,10 @@ public class UniqueNames extends ConsoleProgram {
 			println(list.get(i));
 		}
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new UniqueNames().start(args);
+	}
 }

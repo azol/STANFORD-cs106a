@@ -133,4 +133,10 @@ public class UfoGame extends GraphicsProgram {
 	private GRect ufo;
 	private GOval bullet;
 	private boolean ufoToLeft; // when true, UFO is moving to left
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new UfoGame().start(args);
+	}
 }

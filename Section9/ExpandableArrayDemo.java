@@ -17,4 +17,10 @@ public class ExpandableArrayDemo extends ConsoleProgram {
 			println("Got value: " + value);
 		}
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new ExpandableArrayDemo().start(args);
+	}
 }

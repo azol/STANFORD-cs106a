@@ -25,4 +25,9 @@ public class Fibonacci extends ConsoleProgram {
 /* Defines the largest term to be displayed */
 	private static final int MAX_TERM_VALUE = 10000;
 
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Fibonacci().start(args);
+	}
 }

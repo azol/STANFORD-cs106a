@@ -29,4 +29,10 @@ public class FlipVertical extends GraphicsProgram {
 		}
 		return new GImage(array);
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new FlipVertical().start(args);
+	}
 }

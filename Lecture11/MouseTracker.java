@@ -24,4 +24,10 @@ public class MouseTracker extends GraphicsProgram {
 
 	/* Private instance variable */
 	private GLabel label;
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new MouseTracker().start(args);
+	}
 }

@@ -31,4 +31,10 @@ public class ColorChangingSquare extends GraphicsProgram {
 
 /* Private instance variables */
 	private RandomGenerator rgen = RandomGenerator.getInstance();
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new ColorChangingSquare().start(args);
+	}
 }

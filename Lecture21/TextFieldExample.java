@@ -23,4 +23,10 @@ public class TextFieldExample extends ConsoleProgram {
 
 /* Private instance variables */
 	private JTextField nameField;
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new TextFieldExample().start(args);
+	}
 }

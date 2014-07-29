@@ -332,4 +332,10 @@ public class Breakout extends GraphicsProgram {
 	int brickCounter = NBRICK_ROWS * NBRICKS_PER_ROW;
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Breakout().start(args);
+	}
 }

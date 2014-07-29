@@ -49,4 +49,10 @@ public class Target extends GraphicsProgram {
 		circle.setFilled(true);
 		return circle;
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Target().start(args);
+	}
 }

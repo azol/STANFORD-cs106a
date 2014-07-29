@@ -78,4 +78,10 @@ public class IsGooglewhack extends ConsoleProgram {
 		}
 		return -1;
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new IsGooglewhack().start(args);
+	}
 }

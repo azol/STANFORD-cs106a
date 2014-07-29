@@ -82,4 +82,10 @@ public class BouncingBall extends GraphicsProgram {
 			ball.move(0, -2 * diff);
 		}
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new BouncingBall().start(args);
+	}
 }

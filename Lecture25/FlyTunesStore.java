@@ -181,4 +181,10 @@ public class FlyTunesStore extends ConsoleProgram {
 
 	// Inventory of all the songs carried by the store
 	private ArrayList<Song> songs = new ArrayList<Song>();
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new FlyTunesStore().start(args);
+	}
 }

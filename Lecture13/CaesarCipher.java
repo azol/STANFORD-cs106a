@@ -46,4 +46,10 @@ public class CaesarCipher extends ConsoleProgram {
 		}
 		return ch;
 	}
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new CaesarCipher().start(args);
+	}
 }

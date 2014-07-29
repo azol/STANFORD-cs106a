@@ -36,4 +36,9 @@ public class RemoveAllOccurrences extends ConsoleProgram {
 		return str;
 	}
 
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new RemoveAllOccurrences().start(args);
+	}
 }

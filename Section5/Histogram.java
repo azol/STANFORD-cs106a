@@ -76,4 +76,10 @@ public class Histogram extends ConsoleProgram {
 
 /* Name of the data file */
 	private static final String DATA_FILE = "MidtermScores.txt";
+
+	/* Standard Java entry point */
+	/* This method can be eliminated in most Java environments */
+	public static void main(String[] args) {
+		new Histogram().start(args);
+	}
 }
