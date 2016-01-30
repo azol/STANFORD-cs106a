@@ -48,7 +48,7 @@ public class InteractiveDrawFace extends GraphicsProgram {
 
 	private void initColorChooser() {
 		// Create combo box with color choices
-		pickColor = new JComboBox();
+		pickColor = new JComboBox<>();
 		pickColor.addItem("Black");
 		pickColor.addItem("Blue");
 		pickColor.addItem("Green");
@@ -119,5 +119,5 @@ public class InteractiveDrawFace extends GraphicsProgram {
 	private JRadioButton smallRB;
 	private JRadioButton medRB;
 	private JRadioButton largeRB;
-	private JComboBox pickColor;
+	private JComboBox<String> pickColor;
 }
