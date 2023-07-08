@@ -30,9 +30,9 @@ public class CountNames extends ConsoleProgram {
 			// count if it did, or create a new count if it didn't.
 			Integer count = map.get(name);
 			if (count == null) {
-				count = new Integer(1);
+				count = 1;
 			} else {
-				count = new Integer(count + 1);
+				count = count + 1;
 			}
 			map.put(name, count);
 		}
